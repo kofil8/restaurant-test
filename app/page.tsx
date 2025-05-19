@@ -106,7 +106,6 @@ export default function Home() {
                 <Image
                   src='/images/cuisine.jpg'
                   alt='Cuisine'
-                  alt='Background'
                   fill
                   className='object-cover'
                   priority

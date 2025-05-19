@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-// This async thunk will call your backend API to get menu data
+
 export const fetchMenu = createAsyncThunk("menu/fetchMenu", async () => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/menu`);
   if (!res.ok) throw new Error("Failed to fetch menu");

@@ -16,13 +16,13 @@ const navItems = [
   },
   {
     name: "Menu",
-    href: "#",
+    href: "/menu",
     current: false,
     dropdown: [
-      { name: "Breakfast", href: "#breakfast" },
-      { name: "Lunch", href: "#lunch" },
-      { name: "Dinner", href: "#dinner" },
-      { name: "Specials", href: "#specials" },
+      { name: "Breakfast", href: "/menu" },
+      { name: "Lunch", href: "/menu" },
+      { name: "Dinner", href: "/menu" },
+      { name: "Specials", href: "/menu" },
     ],
   },
   {
@@ -38,7 +38,7 @@ const navItems = [
   },
   {
     name: "Contact",
-    href: "#",
+    href: "/",
     current: false,
   },
 ];

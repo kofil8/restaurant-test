@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import EnhancedFoodMenu from "@/components/enhanced-food-menu";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Menu | Restaurant",
   description:
-    "Explore our delicious menu offerings for breakfast, lunch, and dinner.",
+    "Explore our delicious menu offerings for breakfast, lunch, dinner and special.",
 };
 
 export default function MenuPage() {
@@ -20,16 +21,13 @@ export default function MenuPage() {
           <div className='absolute inset-0 overflow-hidden'>
             <div className='absolute top-0 right-0 w-96 h-96 bg-red-700/30 rounded-full blur-3xl'></div>
             <div className='absolute bottom-0 left-0 w-96 h-96 bg-red-700/30 rounded-full blur-3xl'></div>
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className='w-full h-full object-cover'
-            >
-              <source src='/videos/bgvideo.mp4' type='video/mp4' />
-              Your browser does not support the video tag.
-            </video>
+            <Image
+              src='/images/cuisine.jpg'
+              alt='Background'
+              fill
+              className='object-cover'
+              priority
+            />
           </div>
 
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 lg:py-32 relative z-10'>

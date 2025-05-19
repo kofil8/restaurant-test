@@ -1,4 +1,4 @@
-# Restaurant Pro
+# Restaurant Project
 
 A modern, full-featured restaurant management web application built with **Next.js**. Developed as part of the Antopolis recruitment process, this project demonstrates best practices in frontend development, UI/UX, and scalable architecture.
 
@@ -52,7 +52,7 @@ A modern, full-featured restaurant management web application built with **Next.
 
 5. **Open [http://localhost:3000](http://localhost:3000) to view the app.**
 
-**Open [https://restaurant-kofil.vercel.app/](https://restaurant-kofil.vercel.app/) for view live deploy in Vercel...**
+**Open [https://restaurant-kofil.vercel.app/](https://restaurant-kofil.vercel.app/) for view live deployed in Vercel...**
 
 ---
 

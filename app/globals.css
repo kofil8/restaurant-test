@@ -1,0 +1,293 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+  --primary: 220, 38, 38;
+  --primary-dark: 185, 28, 28;
+  --primary-light: 254, 226, 226;
+  --secondary: 245, 245, 245;
+  --text-light: 255, 255, 255;
+  --text-dark: 31, 41, 55;
+  --accent: 251, 191, 36;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  body {
+    color: rgb(var(--text-dark));
+    background: rgb(var(--background-rgb));
+    font-family: "Inter", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold tracking-tight;
+  }
+
+  .section-padding {
+    @apply py-16 px-4 sm:px-6 md:px-8 lg:px-12;
+  }
+
+  .container-width {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-full font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply bg-red-600 hover:bg-red-700 text-white focus:ring-red-500;
+  }
+
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-100 text-red-600 border border-red-600 focus:ring-red-500;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg;
+  }
+
+  .food-card {
+    @apply card hover:translate-y-[-8px];
+  }
+
+  .badge {
+    @apply px-3 py-1 text-xs font-medium rounded-full;
+  }
+
+  .badge-breakfast {
+    @apply bg-red-600 text-white;
+  }
+
+  .badge-lunch {
+    @apply bg-amber-500 text-white;
+  }
+
+  .badge-dinner {
+    @apply bg-indigo-600 text-white;
+  }
+
+  /* Typography enhancements */
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl leading-tight;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl leading-tight;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+
+  /* Enhanced buttons */
+  .btn {
+    @apply font-medium transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95;
+  }
+
+  /* Enhanced cards */
+  .card {
+    @apply rounded-2xl shadow-md hover:shadow-xl transition-all duration-300;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--secondary));
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--primary));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--primary-dark));
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+.animate-slide-left {
+  animation: slideInLeft 0.5s ease-out;
+}
+
+.animate-slide-right {
+  animation: slideInRight 0.5s ease-out;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s infinite ease-in-out;
+}
+
+/* Carousel styles */
+.carousel-container {
+  @apply relative overflow-hidden rounded-3xl;
+}
+
+.carousel-slide {
+  @apply transition-opacity duration-500 ease-in-out;
+}
+
+.carousel-indicator {
+  @apply h-1.5 rounded-full transition-all duration-300 ease-in-out;
+}
+
+.carousel-indicator.active {
+  @apply bg-white w-16;
+}
+
+.carousel-indicator.inactive {
+  @apply bg-white/30 w-4;
+}
+
+.carousel-thumbnail {
+  @apply relative rounded-full overflow-hidden border-2 transition-all duration-300 cursor-pointer;
+}
+
+.carousel-thumbnail.active {
+  @apply border-white scale-110 shadow-lg;
+}
+
+.carousel-thumbnail.inactive {
+  @apply border-white/50 hover:border-white/80;
+}
+
+.carousel-nav-button {
+  @apply absolute top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white rounded-full p-3 transition-all duration-300 z-10;
+}
+
+/* Enhanced hover effects */
+.hover-lift {
+  @apply transition-transform duration-300 hover:-translate-y-1;
+}
+
+.hover-scale {
+  @apply transition-transform duration-300 hover:scale-105;
+}
+
+.hover-glow {
+  @apply transition-all duration-300;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 15px rgba(220, 38, 38, 0.5);
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  @apply bg-white/10 backdrop-blur-md border border-white/20;
+}
+
+/* Image effects */
+.img-zoom-container {
+  @apply overflow-hidden;
+}
+
+.img-zoom {
+  @apply transition-transform duration-700 ease-in-out hover:scale-110;
+}
+
+.img-sepia {
+  @apply sepia transition-all duration-500 hover:sepia-0;
+}
+
+/* Timeline styles */
+.timeline-container {
+  @apply relative;
+}
+
+.timeline-line {
+  @apply absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-red-100;
+}
+
+.timeline-marker {
+  @apply absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 rounded-full bg-red-600 border-4 border-white shadow-lg z-10;
+}
+
+.timeline-content {
+  @apply bg-white rounded-2xl shadow-md overflow-hidden;
+}

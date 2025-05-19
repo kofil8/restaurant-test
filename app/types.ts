@@ -1,7 +1,7 @@
 export type FoodItem = {
   id: number
   name: string
-  type: "Breakfast" | "Lunch" | "Dinner"
+  type: "Breakfast" | "Lunch" | "Dinner" | "Special"
   rating: number
   price: number
   image: string

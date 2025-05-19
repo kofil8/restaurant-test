@@ -7,6 +7,7 @@ import { Utensils, Clock, Award, Users } from "lucide-react";
 import InfinitePartnersCarousel from "@/components/infinite-partners-carousel";
 import CustomerFeedback from "@/components/customer-feedback";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -102,16 +103,14 @@ export default function Home() {
               <div className='absolute inset-0 overflow-hidden'>
                 <div className='absolute top-0 right-0 w-96 h-96 bg-red-700/30 rounded-full blur-3xl'></div>
                 <div className='absolute bottom-0 left-0 w-96 h-96 bg-red-700/30 rounded-full blur-3xl'></div>
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className='w-full h-full object-cover'
-                >
-                  <source src='/videos/bgvideo.mp4' type='video/mp4' />
-                  Your browser does not support the video tag.
-                </video>
+                <Image
+                  src='/images/cuisine.jpg'
+                  alt='Cuisine'
+                  alt='Background'
+                  fill
+                  className='object-cover'
+                  priority
+                />
               </div>
 
               <div className='relative z-10 text-center'>
